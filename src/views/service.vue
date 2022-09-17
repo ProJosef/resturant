@@ -72,12 +72,11 @@ header > h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 60px;
   margin-bottom: 100px;
 }
 .service {
   text-align: left;
-  max-width: 200px;
+  max-width: 250px;
   margin: 10px;
   padding: 30px 30px 40px 20px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

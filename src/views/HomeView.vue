@@ -26,9 +26,9 @@ export default {
 <style>
 .container {
   background: url("../assets/main.jpg");
-  height: 100vh;
+  min-height: 100vh;
   color: white;
-  padding-top: 17%;
+  padding-top: 10rem;
 }
 .home {
   display: flex;
@@ -39,7 +39,8 @@ export default {
   text-align: left;
 }
 .home h1 {
-  font-size: 5vw;
+  font-size: 4rem;
+  margin: 0;
 }
 .home p {
   margin-block: 5%;

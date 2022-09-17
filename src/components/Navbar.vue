@@ -69,6 +69,7 @@ nav a.router-link-exact-active {
 nav button {
   padding: 5px 20px;
   width: fit-content;
+  margin-right: 15px;
 }
 @media only screen and (max-width: 900px) {
   nav {
@@ -91,6 +92,9 @@ nav button {
   }
   .section.active {
     display: flex;
+  }
+  nav button {
+    margin: 0 0 15px 0;
   }
 }
 </style>

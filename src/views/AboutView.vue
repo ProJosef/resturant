@@ -74,6 +74,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   height: fit-content;
+  margin-left: 40px;
 }
 .th {
   margin-left: 50px;
@@ -100,12 +101,13 @@ main {
 }
 .about > div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 25px;
 }
 .about > div > div {
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
 }
 .about > div h1 {
   color: #fea116;
