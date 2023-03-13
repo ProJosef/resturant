@@ -1,11 +1,11 @@
 <template>
   <nav>
     <router-link :to="{ name: 'home' }">
-      <div class="title">
-        <h1><font-awesome-icon icon="fa-solid fa-utensils" /> Resturan</h1>
-      </div>
+      <h1 class="title">
+        <font-awesome-icon icon="fa-solid fa-utensils" /> Resturan
+      </h1>
     </router-link>
-    <div class="navbar title"  @click="show">
+    <div class="navbar title" @click="show">
       <font-awesome-icon icon="fa-solid fa-bars" />
     </div>
     <div ref="n" class="section">
@@ -23,34 +23,32 @@
 export default {
   methods: {
     show() {
-        this.$refs.n.classList.toggle("active")
-      }
-  }
+      this.$refs.n.classList.toggle("active");
+    },
+  },
 };
 </script>
 
 <style scoped>
 .title {
   color: #fea116;
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 32px;
+  margin-block: 16px;
 }
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background: transparent;
   background: black;
 }
 .section a {
   font-weight: bold;
   color: wheat;
-  padding: 1.3rem 15px;
+  padding: 16px;
+  border-radius: 4px;
   transition: 0.5s;
 }
 .section a:hover {
@@ -59,22 +57,22 @@ nav {
 .navbar {
   display: none;
   position: absolute;
-  top: 0.5rem;
-  right: 1rem;
+  top: 4px;
+  right: 16px;
   cursor: pointer;
 }
 nav a.router-link-exact-active {
   color: #fea116;
 }
 nav button {
-  padding: 5px 20px;
-  width: fit-content;
-  margin-right: 15px;
+  padding: 12px 24px;
+  margin-inline: 16px;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   nav {
     align-items: flex-start;
     flex-direction: column;
+    padding-inline: 16px;
   }
   .section {
     flex-direction: column;
@@ -86,15 +84,14 @@ nav button {
     display: block;
   }
   .section a {
-    background: black;
     width: 100%;
-    padding-block: .8rem;
+    padding-block: 16px;
   }
   .section.active {
     display: flex;
   }
   nav button {
-    margin: 0 0 15px 0;
+    margin-block: 16px;
   }
 }
 </style>

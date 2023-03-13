@@ -28,15 +28,12 @@
       <h3 class="main-title">Newsletter _____</h3>
       <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
       <div class="sign-up">
-        <input type="text" placeholder="Your email" /><button>SIGNUP</button>
+        <input type="text" placeholder="Your email" />
+        <button>SIGN UP</button>
       </div>
     </div>
   </footer>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 footer {
@@ -44,7 +41,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   background: #0f172b;
-  padding-bottom: 50px;
+  padding-bottom: 64px;
 }
 footer > div {
   display: flex;
@@ -60,7 +57,7 @@ footer button {
   background: none;
   font-weight: 900;
   border: none;
-  margin-top: 10px;
+  margin-top: 8px; 
   color: white;
   cursor: pointer;
   transition: 0.3s;
@@ -69,22 +66,21 @@ footer button:hover {
   letter-spacing: 1px;
 }
 .sign-up input{
-  width: 200px;
-  height: 50px;
-  padding: 7px;
+  width: 100% ;
+  height: 48px;
+  padding: 8px;
 }
 .sign-up{
   position: relative;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .sign-up button {
   position: absolute;
-  right: 5px;
-  padding: 5px 10px;
-  top: -4px;
-  height: 72%;
-  border-radius: 6px;
+  right: 8px;
+  padding: 8px 16px;
+  border-radius: 5px;
   color: white;
   background: #fea116;
+  font-weight: 600;
 }
 </style>

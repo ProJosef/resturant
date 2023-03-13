@@ -1,6 +1,5 @@
 <template>
   <header>
-    <Navbar />
     <h1>Service</h1>
   </header>
   <main>
@@ -31,53 +30,44 @@
       </div>
     </div>
   </main>
-  <Footer />
 </template>
-
-<script>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  components: { Navbar, Footer },
-};
-</script>
 
 <style>
 .service div {
   color: #fea116;
-  font-size: 50px;
-  margin-bottom: 15px;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 header {
   background: url("../assets/main.jpg");
-  height: 60vh;
+  height: 64vh;
   color: white;
-  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header > h1 {
   font-size: 4rem;
 }
 .prime-title {
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin-bottom: 48px;
+  margin-top: 24px;
 }
 .main-title {
   font-family: "Pacifico", cursive;
   color: #fea116;
-  margin-top: 70px;
+  margin-top: 96px;
 }
 .services {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 96px;
 }
 .service {
   text-align: left;
-  max-width: 250px;
-  margin: 10px;
+  max-width: 256px;
+  margin: 16px;
   padding: 30px 30px 40px 20px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;

@@ -1,15 +1,17 @@
 <template>
-  <!-- <HomeView />
-  <service /> -->
+  <Navbar />
+
   <router-view />
+  <Footer />
 </template>
 
 <script>
-import HomeView from "./views/HomeView.vue";
-import service from "./views/service.vue";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+
 
 export default {
-  components: { HomeView , service},
+  components: { Navbar, Footer },
 };
 </script>
 <style>

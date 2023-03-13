@@ -1,6 +1,5 @@
 <template>
   <header>
-    <Navbar />
     <h1>Contact Us</h1>
   </header>
   <main>
@@ -9,7 +8,7 @@
     <div class="contact-us">
       <div class="contact">
         <h3 class="main-title">Booking _____</h3>
-        <p><font-awesome-icon icon="fa-solid fa-envelope" /> book@example.com</p>
+          <p><font-awesome-icon icon="fa-solid fa-envelope" /> book@example.com</p>
       </div>
       <div class="contact">
         <h3 class="main-title">General _____</h3>
@@ -21,17 +20,7 @@
       </div>
     </div>
   </main>
-  <Footer />
 </template>
-
-<script>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  components: { Navbar, Footer },
-};
-</script>
 
 <style>
 .contact .fa-envelope {
@@ -39,20 +28,17 @@ export default {
 }
 .contact-us {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-inline: 60px;
-  margin-bottom: 6rem;
+  padding-inline: 64px;
+  margin-bottom: 96px;
 }
 .contact {
   text-align: left;
   max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
+  margin-block: 16px;
 }
 .contact h3 {
-  margin-block: 10px;
+  margin-block: 8px;
 }
 </style>

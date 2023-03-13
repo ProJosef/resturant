@@ -1,9 +1,8 @@
 <template>
   <header>
-    <Navbar />
     <h1>About Us</h1>
   </header>
-  <main>
+  <main class="main">
     <div class="image">
       <img src="../assets/about-1.jpg" width="250" height="250" />
       <img class="se" src="../assets/about-2.jpg" width="200" height="200" />
@@ -12,7 +11,9 @@
     </div>
     <div class="about">
       <h3 class="main-title">About Us _____</h3>
-      <h1 class="prime-title">Welcome to <font-awesome-icon icon="fa-solid fa-utensils" /> Restoran</h1>
+      <h1 class="prime-title">
+        Welcome to <font-awesome-icon icon="fa-solid fa-utensils" /> Restoran
+      </h1>
       <p>
         Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
         amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.
@@ -41,40 +42,28 @@
       <button class="book">READ MORE</button>
     </div>
   </main>
-  <section>
-    <h3 class="main-title">_____ Team Members _____</h3>
-    <h1 class="prime-title">Our Master Chefs</h1>
-    <div class="chefs">
-      <div class="chef" v-for="chef in $store.state.chefs" :key="chef.name">
-        <img :src="chef.image" width="200" />
-        <h1>{{ chef.name }}</h1>
-        <p>{{ chef.jobTitle }}</p>
-      </div>
+  <h3 class="main-title">_____ Team Members _____</h3>
+  <h1 class="prime-title">Our Master Chefs</h1>
+  <div class="chefs">
+    <div class="chef" v-for="chef in $store.state.chefs" :key="chef.name">
+      <img :src="chef.image" width="200" />
+      <h2>{{ chef.name }}</h2>
+      <p>{{ chef.jobTitle }}</p>
     </div>
-  </section>
-  <Footer />
+  </div>
 </template>
 
-<script>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  components: { Navbar, Footer },
-};
-</script>
-
-<style scoped>
+<style>
 .fa-utensils {
   color: #fea116;
 }
 .image {
-  max-width: 520px;
+  max-width: 550px;
+  padding-inline: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   height: fit-content;
-  margin-left: 40px;
 }
 .th {
   margin-left: 50px;
@@ -84,20 +73,20 @@ export default {
   margin-right: 50px;
   margin-bottom: 20px;
 }
-main {
+.main {
   display: flex;
   flex-wrap: wrap;
-  margin-block: 80px;
   justify-content: center;
+  margin-block: 96px;
   text-align: left;
 }
 .about {
-  max-width: 500px;
-  margin-left: 40px;
+  padding-inline: 16px;
+  max-width: 520px;
 }
 .about > p {
-  margin-bottom: 25px;
-  line-height: 23px;
+  margin-bottom: 24px;
+  line-height: 1.6rem;
 }
 .about > div {
   display: flex;
@@ -107,7 +96,7 @@ main {
 .about > div > div {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 .about > div h1 {
   color: #fea116;
@@ -119,18 +108,15 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 64px;
 }
-.chef h1 {
-  margin-block: 15px;
+.chef > h2 {
+  margin-block: 16px;
 }
 .chef img {
   border-radius: 50%;
 }
-section>h1 {
-  font-size: 40px;
-}
 .chef {
-  margin-inline: 20px;
-  margin-bottom: 100px;
+  margin: 24px;
 }
 </style>

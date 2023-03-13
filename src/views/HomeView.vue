@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Navbar />
     <div class="home">
       <h1>Enjoy Our Delicious Meal</h1>
       <p>
@@ -11,18 +10,53 @@
       <button class="book">BOOK A TABLE</button>
     </div>
   </div>
-  <Footer />
+  <article>
+    <h3 class="main-title">_____ Our Services _____</h3>
+    <div class="services">
+      <div
+        v-for="service in $store.state.services"
+        :key="service.title"
+        class="service"
+      >
+        <div><font-awesome-icon :icon="service.icon" /></div>
+        <h4>
+          {{ service.title }}
+        </h4>
+        <p>{{ service.descrption }}</p>
+      </div>
+    </div>
+  </article>
+  <article>
+    <h3 class="main-title">_____ Team Members _____</h3>
+    <div class="chefs">
+      <div class="chef" v-for="chef in $store.state.chefs" :key="chef.name">
+        <img :src="chef.image" width="200" />
+        <h2>{{ chef.name }}</h2>
+        <p>{{ chef.jobTitle }}</p>
+      </div>
+    </div>
+  </article>
+  <article>
+    <h3 class="main-title">_____ Food Menu _____</h3>
+    <div class="foods">
+      <div
+        v-for="food in $store.state.foods.slice(0, 4)"
+        :key="food.name"
+        class="food"
+      >
+        <img :src="food.image" />
+        <div>
+          <div>
+            <h3>{{ food.name }}</h3>
+            <h3 class="price">{{ food.price }} $</h3>
+          </div>
+          <p>{{ food.descrption }}</p>
+        </div>
+      </div>
+    </div>
+  </article>
 </template>
 
-<script>
-import Navbar from "@/components/Navbar.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  components: { Navbar, Footer },
-  name: "HomeView",
-};
-</script>
 <style>
 .container {
   background: url("../assets/main.jpg");
@@ -44,18 +78,18 @@ export default {
 }
 .home p {
   margin-block: 5%;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 .book {
-  padding: 15px 45px;
-  padding-bottom: 30px;
-  height: 30px;
-  border-radius: 6px;
+  padding: 16px 32px;
+  border-radius: 5px;
   color: white;
   background: #fea116;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   border: none;
 }
-
+article h3 {
+  margin-bottom: 64px;
+}
 </style>
